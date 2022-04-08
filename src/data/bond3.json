@@ -1,0 +1,81 @@
+{
+  "burns": [],
+  "mints": [
+    {
+      "amount0": "995000",
+      "amount1": "546806.02292768959435625",
+      "amountUSD": "0",
+      "id": "0xfdd4ed4bebbb8554106e80f3443e0caa75ca06aa4a5c31453b7fce1ade547ea1-0",
+      "pair": {
+        "token0": {
+          "id": "0x6369263c31678d92d206152fa34a2c21bbc59806",
+          "symbol": "bDuet#3"
+        },
+        "token1": {
+          "id": "0x95ee03e1e2c5c4877f9a298f1c0d6c98698fab7b",
+          "symbol": "DUET"
+        }
+      },
+      "timestamp": "1648262087",
+      "to": "0x19da3adb9c3a901c4850b632b6e1cab2dae14ea0"
+    },
+    {
+      "amount0": "915.557595227168425883",
+      "amount1": "503.148148148148148147",
+      "amountUSD": "0",
+      "id": "0x883be2b195115ff43b472b070358af2329a66e1beb7a5cd1b63e9a3a3065772f-0",
+      "pair": {
+        "token0": {
+          "id": "0x6369263c31678d92d206152fa34a2c21bbc59806",
+          "symbol": "bDuet#3"
+        },
+        "token1": {
+          "id": "0x95ee03e1e2c5c4877f9a298f1c0d6c98698fab7b",
+          "symbol": "DUET"
+        }
+      },
+      "timestamp": "1648210513",
+      "to": "0xb1b9b4bbe8a92d535f5df2368e7fd2ecfb3a1950"
+    },
+    {
+      "amount0": "105000",
+      "amount1": "56700",
+      "amountUSD": "0",
+      "id": "0xfa9a4e4f056102d7a06288f9386709621994d9cfdcde263e555be0a0d7dbba5f-0",
+      "pair": {
+        "token0": {
+          "id": "0x6369263c31678d92d206152fa34a2c21bbc59806",
+          "symbol": "bDuet#3"
+        },
+        "token1": {
+          "id": "0x95ee03e1e2c5c4877f9a298f1c0d6c98698fab7b",
+          "symbol": "DUET"
+        }
+      },
+      "timestamp": "1648205413",
+      "to": "0x49c8c7b892f82eedc98551ccb69745005a2fd079"
+    }
+  ],
+  "swaps": [
+    {
+      "amount0In": "0",
+      "amount0Out": "915.557595227168425883",
+      "amount1In": "500",
+      "amount1Out": "0",
+      "amountUSD": "0",
+      "from": "0xb58c189fad07daf826542ac9f3a3c3a2c5ac4a75",
+      "id": "0xa4979deed8eb11770baafe3668c64ff7412c634f55318a4d8522d10fc728d5bb-0",
+      "pair": {
+        "token0": {
+          "id": "0x6369263c31678d92d206152fa34a2c21bbc59806",
+          "symbol": "bDuet#3"
+        },
+        "token1": {
+          "id": "0x95ee03e1e2c5c4877f9a298f1c0d6c98698fab7b",
+          "symbol": "DUET"
+        }
+      },
+      "timestamp": "1648208518"
+    }
+  ]
+}

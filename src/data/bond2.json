@@ -1,0 +1,121 @@
+{
+  "burns": [],
+  "mints": [
+    {
+      "amount0": "99.999999999999999999",
+      "amount1": "142.332103062310103349",
+      "amountUSD": "28.93451204333343992762490676325",
+      "id": "0x495f5fac982a55f76992a83bc1e0951f6ec65fed11cd5090d7891b0fba77f521-0",
+      "pair": {
+        "token0": {
+          "id": "0x95ee03e1e2c5c4877f9a298f1c0d6c98698fab7b",
+          "symbol": "DUET"
+        },
+        "token1": {
+          "id": "0xa1e580359cde3e7f8dc34e0dd0dba6a5d292611c",
+          "symbol": "bDuet#2"
+        }
+      },
+      "timestamp": "1648964533",
+      "to": "0xb1b9b4bbe8a92d535f5df2368e7fd2ecfb3a1950"
+    },
+    {
+      "amount0": "30399.564028314028314028",
+      "amount1": "45000",
+      "amountUSD": "0",
+      "id": "0x9cf5f422fc31f1c1da92f2516b3fb09cc7af76c725926b92f2a051393be127a7-0",
+      "pair": {
+        "token0": {
+          "id": "0x95ee03e1e2c5c4877f9a298f1c0d6c98698fab7b",
+          "symbol": "DUET"
+        },
+        "token1": {
+          "id": "0xa1e580359cde3e7f8dc34e0dd0dba6a5d292611c",
+          "symbol": "bDuet#2"
+        }
+      },
+      "timestamp": "1648262039",
+      "to": "0xb1b9b4bbe8a92d535f5df2368e7fd2ecfb3a1950"
+    },
+    {
+      "amount0": "69930",
+      "amount1": "105000",
+      "amountUSD": "0",
+      "id": "0x63db57ac415c772d00206b1c8b63f656a4c5545255f9e7db4762cebec3b8e25c-0",
+      "pair": {
+        "token0": {
+          "id": "0x95ee03e1e2c5c4877f9a298f1c0d6c98698fab7b",
+          "symbol": "DUET"
+        },
+        "token1": {
+          "id": "0xa1e580359cde3e7f8dc34e0dd0dba6a5d292611c",
+          "symbol": "bDuet#2"
+        }
+      },
+      "timestamp": "1648205317",
+      "to": "0x49c8c7b892f82eedc98551ccb69745005a2fd079"
+    }
+  ],
+  "swaps": [
+    {
+      "amount0In": "1000",
+      "amount0Out": "0",
+      "amount1In": "0",
+      "amount1Out": "1433.705214032348122131",
+      "amountUSD": "146.0096061037282623420544074847",
+      "from": "0xe8d462648329acabcfc4adf2480a9480c14af275",
+      "id": "0x95df7d85c5595e00e0e517f8959fb7620e28feb0eed6c88c1466b3991171c021-0",
+      "pair": {
+        "token0": {
+          "id": "0x95ee03e1e2c5c4877f9a298f1c0d6c98698fab7b",
+          "symbol": "DUET"
+        },
+        "token1": {
+          "id": "0xa1e580359cde3e7f8dc34e0dd0dba6a5d292611c",
+          "symbol": "bDuet#2"
+        }
+      },
+      "timestamp": "1648770537"
+    },
+    {
+      "amount0In": "1000.391511324718198868",
+      "amount0Out": "0",
+      "amount1In": "0",
+      "amount1Out": "1462.685858469461753497",
+      "amountUSD": "145.9097250481633605346133974156",
+      "from": "0xe17b914aa485df29e273cb22d9ff28d337528d2d",
+      "id": "0xb6597cfe53aae8abceebbbe98bbf0efeb0627b9ed81c0fcdc83f91275177d0d2-0",
+      "pair": {
+        "token0": {
+          "id": "0x95ee03e1e2c5c4877f9a298f1c0d6c98698fab7b",
+          "symbol": "DUET"
+        },
+        "token1": {
+          "id": "0xa1e580359cde3e7f8dc34e0dd0dba6a5d292611c",
+          "symbol": "bDuet#2"
+        }
+      },
+      "timestamp": "1648763743"
+    },
+    {
+      "amount0In": "500",
+      "amount0Out": "0",
+      "amount1In": "0",
+      "amount1Out": "743.570629891912038762",
+      "amountUSD": "0",
+      "from": "0xb58c189fad07daf826542ac9f3a3c3a2c5ac4a75",
+      "id": "0x7296b5a4334ebabb43aeb5b42060707a1d5f33894110eca5d13139a0dd1841b3-0",
+      "pair": {
+        "token0": {
+          "id": "0x95ee03e1e2c5c4877f9a298f1c0d6c98698fab7b",
+          "symbol": "DUET"
+        },
+        "token1": {
+          "id": "0xa1e580359cde3e7f8dc34e0dd0dba6a5d292611c",
+          "symbol": "bDuet#2"
+        }
+      },
+      "timestamp": "1648208488"
+    }
+  ]
+}
