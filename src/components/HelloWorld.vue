@@ -17,16 +17,71 @@
 </template>
 
 <script>
-import bond0_data from "../data/bond0.json";
-import bond1_data from "../data/bond1.json";
-import bond2_data from "../data/bond2.json";
-import bond3_data from "../data/bond3.json";
-import bond4_data from "../data/bond4.json";
-import bond5_data from "../data/bond5.json";
-import bond6_data from "../data/bond6.json";
-import bond7_data from "../data/bond7.json";
+import bondedList from "../data/bondConfig.json"
 import dataConfig from "../util/dataConfig";
 import {XlsxWorkbook,XlsxSheet,XlsxDownload} from "vue-xlsx";
+import gql from 'graphql-tag';
+
+let dataGql = gql`
+  query poolTransactions($address: Bytes!) {
+    mints(first: 35, orderBy: timestamp, orderDirection: desc, where: { pair: $address }) {
+      id
+      timestamp
+      pair {
+        token0 {
+          id
+          symbol
+        }
+        token1 {
+          id
+          symbol
+        }
+      }
+      to
+      amount0
+      amount1
+      amountUSD
+    }
+    swaps(first: 35, orderBy: timestamp, orderDirection: desc, where: { pair: $address }) {
+      id
+      timestamp
+      pair {
+        token0 {
+          id
+          symbol
+        }
+        token1 {
+          id
+          symbol
+        }
+      }
+      from
+      amount0In
+      amount1In
+      amount0Out
+      amount1Out
+      amountUSD
+    }
+    burns(first: 35, orderBy: timestamp, orderDirection: desc, where: { pair: $address }) {
+      id
+      timestamp
+      pair {
+        token0 {
+          id
+          symbol
+        }
+        token1 {
+          id
+          symbol
+        }
+      }
+      sender
+      amount0
+      amount1
+      amountUSD
+    }
+  }
+`
 
 export default {
   name: "HelloWorld",
@@ -44,67 +99,32 @@ export default {
     };
   },
   mounted() {
-    let table_data0 = dataConfig(bond0_data);
-    let table_data1 = dataConfig(bond1_data);
-    let table_data2 = dataConfig(bond2_data);
-    let table_data3 = dataConfig(bond3_data);
-    let table_data4 = dataConfig(bond4_data);
-    let table_data5 = dataConfig(bond5_data);
-    let table_data6 = dataConfig(bond6_data);
-    let table_data7 = dataConfig(bond7_data);
-    let sheetItem0 = {
-      name: "bond0",
-      data: table_data0
-    };
-    let sheetItem1 = {
-      name: "bond1",
-      data: table_data1
-    };
-    let sheetItem2 = {
-      name: "bond2",
-      data: table_data2
-    };
-    let sheetItem3 = {
-      name: "bond3",
-      data: table_data3
-    };
-    let sheetItem4 = {
-      name: "bond4",
-      data: table_data4
-    };
-    let sheetItem5 = {
-      name: "bond5",
-      data: table_data5
-    };
-    let sheetItem6 = {
-      name: "bond6",
-      data: table_data6
-    };
-    let sheetItem7 = {
-      name: "bond7",
-      data: table_data7
-    };
-    this.sheets.push(sheetItem0);
-    this.sheets.push(sheetItem1);
-    this.sheets.push(sheetItem2);
-    this.sheets.push(sheetItem3);
-    this.sheets.push(sheetItem4);
-    this.sheets.push(sheetItem5);
-    this.sheets.push(sheetItem6);
-    this.sheets.push(sheetItem7);
+    let _this = this
+    bondedList.map((v)=>{
+      _this.getData(v)
+    })
+    console.log(_this.sheets)
   },
   methods: {
-    
-    formatUser: function (value) {
-      let userhead = value.substr(0, 4);
-      let userfoot = value.substr(value.length - 4, value.length);
-      let str = userhead + "****" + userfoot;
-      return str;
-    },
-    formatValue: function (value) {
-      let str = Math.floor(value * 10000) / 10000;
-      return str;
-    },
+    getData(params){
+      let _this = this
+      this.$apollo.addSmartQuery('bondZero', {
+        query: dataGql, variables:{
+          "address": params.address
+        }, 
+        result({data} ) {
+          let turnedData = dataConfig(data);
+          let sheetItem = {
+            name: params.sheetName,
+            data: turnedData
+          };
+          _this.sheets.push(sheetItem);
+        },// 错误处理
+        error(error) {
+          console.error('We\'ve got an error!', error)
+        }
+      });
+    }
   },
 };
 </script>

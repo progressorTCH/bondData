@@ -43,8 +43,6 @@ function dataConfig(data) {
   let bondType = ''
   let pairSit = true
   if (burnData.length != 0) {
-    console.log(burnData[0].pair.token0.symbol)
-    console.log(burnData[0].pair.token1.symbol)
     if (burnData[0].pair.token0.symbol === "DUET") {
       pairSit = true
       bondType = burnData[0].pair.token1.symbol
@@ -53,8 +51,6 @@ function dataConfig(data) {
       bondType = burnData[0].pair.token0.symbol
     }
   } else if (mintData.length != 0) {
-    console.log(mintData[0].pair.token0.symbol)
-    console.log(mintData[0].pair.token1.symbol)
     if (mintData[0].pair.token0.symbol === "DUET") {
       pairSit = true
       bondType = mintData[0].pair.token1.symbol
@@ -114,10 +110,6 @@ function dataConfig(data) {
       hash: v.id
     }
     if (pairSit) {
-      console.log(pairSit)
-      console.log(swapData[0].pair.token0.symbol)
-      console.log(swapData[0].pair.token1.symbol)
-      console.log(v.amount0In)
       if (v.amount0In > 0) {
         item.action = 'buy'
         item.duetAmount = v.amount0In
@@ -138,8 +130,6 @@ function dataConfig(data) {
         item.bondAmount = v.amount0In
       }
     }
-    // console.log(v)
-    // console.log(item)
     finalData.push(item)
   })
   return finalData
